@@ -17,6 +17,10 @@ myApp.controller('ListController', ['$scope', function($scope) {
      {
        "name":"Curtis",
        "company": "Nasa"
+     },
+     {
+       "name": "Frank",
+       "company": "Silicon Graphics"
      }
   ]
 }]);
