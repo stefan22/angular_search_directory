@@ -10,8 +10,12 @@
 </head>
 <body>
   <div class="main" ng-controller="ListController">
+    <div class="search">
+      <p>Search</p>
+      <input type="search" ng-model="query">
+    </div>
     <ul class="artistlist">
-      <li class="artist cf" ng-repeat="item in artists">
+      <li class="artist cf" ng-repeat="item in artists | filter: query">
           <img src="images/{{item.shortname}}_tn.jpg">
           <h2>{{item.name}}</h2>
           <h3>{{item.reknown}}</h3>
