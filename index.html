@@ -12,8 +12,9 @@
   <div class="main" ng-controller="ListController">
     <ul class="artistlist">
       <li class="artist cf" ng-repeat="item in artists">
+          <img src="images/{{item.shortname}}_tn.jpg">
           <h2>{{item.name}}</h2>
-          <h3>{{item.company}}</h3>
+          <h3>{{item.reknown}}</h3>
       </li>
     </ul>
   </div>
