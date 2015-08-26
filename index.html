@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="lib/angular.min.js"></script>
   <title>Angular Search Directory</title>
 </head>
 <body>
-  
+    <h1>Enter your name:</h1>
+    <input type="text" ng-model="name">
+    <p>Welcome {{name}}</p>
+
 </body>
 </html>
