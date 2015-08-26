@@ -3,7 +3,7 @@
 <head>
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <script src="lib/angular.min.js"></script>
-
+  <script src="js/app.js"></script>
   <script src="js/controller.js"></script>
 
   <title>Angular Search Directory</title>
@@ -12,10 +12,16 @@
   <div class="main" ng-controller="ListController">
     <div class="search">
       <p>Search</p>
-      <input type="search" ng-model="query">
+      <input type="search" placeholder="search for artist" autofocus ng-model="query">
+      <label class="formgroup">Order by:
+        <select ng-model="order">
+          <option value="name">Name</option>
+          <option value="reknown">Reknown</option>
+        </select>
+      </label>
     </div>
     <ul class="artistlist">
-      <li class="artist cf" ng-repeat="item in artists | filter: query">
+      <li class="artist cf" ng-repeat="item in artists | filter: queryn | orderBy: order">
           <img ng-src="images/{{item.shortname}}_tn.jpg">
           <h2>{{item.name}}</h2>
           <h3>{{item.reknown}}</h3>

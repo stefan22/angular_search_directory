@@ -1,7 +1,8 @@
-var myApp = angular.module('myApp', []);
+var listController = angular.module('ListController', []);
 
-myApp.controller('ListController', ['$scope', '$http', function($scope, $http) {
+listController.controller('ListController', ['$scope', '$http', function($scope, $http) {
   $http.get('js/data.json').success(function(data) {
     $scope.artists = data;
+  
   });
 }]);
