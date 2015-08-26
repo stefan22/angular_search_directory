@@ -13,12 +13,15 @@
     <div class="search">
       <p>Search</p>
       <input type="search" placeholder="search for artist" autofocus ng-model="query">
-      <label class="formgroup">Order by:
-        <select ng-model="order">
-          <option value="name">Name</option>
-          <option value="reknown">Reknown</option>
-        </select>
-      </label>
+      <div class="info">
+          <label class="formgroup">Order by:
+            <select ng-model="order">
+              <option value="name">Name</option>
+              <option value="reknown">Reknown</option>
+            </select>
+          </label>
+      </div>
+
     </div>
     <ul class="artistlist">
       <li class="artist cf" ng-repeat="item in artists | filter: queryn | orderBy: order">
