@@ -10,27 +10,8 @@
   <title>Angular Search Directory</title>
 </head>
 <body>
-  <div class="main" ng-controller="ListController">
-    <div class="search">
-      <p>Search</p>
-      <input type="search" placeholder="search for artist" autofocus ng-model="query">
-      <div class="info">
-          <label class="formgroup">Order by:
-            <select ng-model="order">
-              <option value="name">Name</option>
-              <option value="reknown">Reknown</option>
-            </select>
-          </label>
-      </div>
+  <div class="main" ng-view>
 
-    </div>
-    <ul class="artistlist">
-      <li class="artist cf" ng-repeat="item in artists | filter: query | orderBy: order">
-          <img ng-src="images/{{item.shortname}}_tn.jpg">
-          <h2>{{item.name}}</h2>
-          <h3>{{item.reknown}}</h3>
-      </li>
-    </ul>
   </div>
 </body>
 </html>

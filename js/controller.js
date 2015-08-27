@@ -5,5 +5,6 @@ listController.controller('ListController', ['$scope', '$http', function($scope,
     $scope.artists = data;
     $scope.order = 'name';
 
+
   });
 }]);

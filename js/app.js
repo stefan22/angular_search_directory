@@ -1,1 +1,4 @@
-var myApp = angular.module('myApp', ['ListController']);
+var myApp = angular.module('myApp', [
+  'ng-route',
+  'ListController'
+]);
