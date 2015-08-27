@@ -10,6 +10,6 @@ myApp.config(['$routeProvider', function($routeProvider) {
     controller: 'ListController'
   }).
   otherwise({
-    redirectTo: 'list'
+    redirectTo: '/list'
   });
 }]);
