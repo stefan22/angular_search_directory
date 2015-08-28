@@ -1,9 +1,11 @@
 hello u are in details page
 <section class="artistinfo">
   <div class="artist cf" ng-model="artists">
-    <img  ng-src="images/{{artists[whichItem].shortname}}_tn.jpg">
+    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt; previous</a>
+    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt; next</a>
     <h1>{{artists[whichItem].name}}</h1>
     <h3>{{artists[whichItem].reknown}}</h3>
+    <img  ng-src="images/{{artists[whichItem].shortname}}_tn.jpg">
     <div class="bio">{{artists[whichItem].bio}}</div>
   </div>
   <a href="index.html">&laquo; back to search</a>
