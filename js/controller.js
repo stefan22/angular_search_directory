@@ -11,6 +11,12 @@ listControllers.controller('DetailsController', ['$scope', '$http', '$routeParam
   $http.get('js/data.json').success(function(data) {
     $scope.artists = data;
     $scope.whichItem = $routeParams.itemId;
+
+    if ($routeParams.itemId > 0) {
+      $scope.prevItem = Number($routeParams.itemId) - 1;
+    } else {
+      $scope.prevItem = $scope.artists.length -1;
+    }
   });
 
 }])
