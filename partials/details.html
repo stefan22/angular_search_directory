@@ -1,7 +1,10 @@
 hello u are in details page
 <section class="artistinfo">
   <div class="artist cf" ng-model="artists">
+    <img src="images/{{artists[whichItem].shortname}}_tn.jpg">
     <h1>{{artists[whichItem].name}}</h1>
+    <h3>{{artists[whichItem].reknown}}</h3>
+    <p>{{artists[whichItem].bio}}</p>
   </div>
   <a href="#/list.html">back</a>
 </section>
